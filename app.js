@@ -1,11 +1,20 @@
-let string = "cool"
-let verycoolButton = document.getElementById(1);
-let notverycoolButton = document.getElementById(2);
+let Buttons = 16;
 
-verycoolButton.onclick = () => cool("clicked cool");
-notverycoolButton.onclick = () => cool("clicked not cool")
+let Files = ["ant game", "wave game"]
+Buttons = Files.length
 
-cool(string)
+let container = document.getElementById("ButtonContainer");
+for (let i = 0; i< Buttons;i++){
+    let btn = document.createElement("button")
+
+    btn.textContent = "Download "+Files[i];
+
+    btn.onclick = function (){
+        console.log("Downloading "+Files[i]+"...")
+    }
+
+    container.appendChild(btn)
+}
 
 function cool(printString){
 console.log(printString)
