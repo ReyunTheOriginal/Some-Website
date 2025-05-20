@@ -1,22 +1,29 @@
-let Buttons = 16;
+const btn = document.getElementById("AddButton")
+const TaskContainer = document.getElementById("Tasks")
+const Input = document.getElementById("Input")
+const CheckBoxs = document.getElementById("CheckBoxs")
 
-let Files = ["ant game", "wave game"]
-Buttons = Files.length
+btn.onclick = () => AddTask();
 
-let container = document.getElementById("ButtonContainer");
-for (let i = 0; i< Buttons;i++){
-    let btn = document.createElement("button")
+function AddTask(){
+ let TaskText = Input.value
+ if (TaskText != ""){
+ let NewCheckBox = document.createElement("button")
+ NewCheckBox.textContent = "g"
+ NewCheckBox.onclick = () => CheckBox(TaskText)
 
-    btn.textContent = "Download "+Files[i];
+ let NewTask = document.createElement("label")
+ NewTask.textContent = TaskText;
 
-    btn.onclick = function (){
-        console.log("Downloading "+Files[i]+"...")
-    }
+ TaskContainer.appendChild(NewTask)
+ TaskContainer.appendChild(NewCheckBox)
 
-    container.appendChild(btn)
+ TaskContainer.appendChild(document.createElement("br"))
+ 
+ Input.value = ""
+ }
 }
 
-function cool(printString){
-console.log(printString)
+function CheckBox(String){
+    console.log(String)
 }
-

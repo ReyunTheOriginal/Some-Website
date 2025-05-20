@@ -1,29 +1,30 @@
 body{
-    background: linear-gradient(to right, #202122, #414345);
-    color: white;
-    outline: auto;
-    outline-color: rgb(39, 185, 88);
-    outline-style:groove;
-    outline-width: 0.3cm;
-    
-}
-h1{
-    color: white;
     background-color: black;
-    outline: auto;
-    outline-color: rgb(39, 185, 88);
-    outline-style:inset;
-    outline-width: 0.3cm;
 }
-
-#ButtonContainer button{
-   padding: 0.2cm;
-   padding: 10px 20px;
-   margin: 0.4cm;
-   font-size: 0.6cm;
-   outline: auto;
-   background-color:rgb(228, 228, 228);
-    outline-color: rgb(0, 0, 0);
-    outline-style:inset;
-    outline-width: 0.3cm;
+#AddButton{
+    border: 0cm;
+    color: black;
+    font-size: 1cm;
+    background-color: rgb(163, 98, 0);
+    outline: auto;
+    outline-color: black;
+}
+label{
+    padding-left: 2cm;
+    color: white;
+}
+#Tasks label, #Tasks button{
+    display: block;
+}
+#Tasks button{
+    color: rgb(255, 255, 255);
+   position: relative;
+    top: -15px;
+    border: 0mm;
+    outline: auto;
+    outline-color: black;
+}
+#Tasks {
+    position: relative;
+    top: 0.2cm;
 }
