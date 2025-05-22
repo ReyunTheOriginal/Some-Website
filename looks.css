@@ -11,8 +11,8 @@ input{
 
 #T {
     position:fixed;
-    top: 0.7cm;
-    left: 2.7cm;
+    top: 1.7rem;
+    left: 6.4rem;
     font-size: larger;
 }
 #AddButton{
