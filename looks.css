@@ -1,13 +1,26 @@
 body{
-    background-color: black;
+    background-color: rgb(15, 15, 15);
+}
+input{
+    position: relative;
+    left: 1.2cm;
+    outline: auto;
+    outline-color:rgb(0, 0, 0);
+    border-radius: 20px;
+}
+
+#T {
+    position:fixed;
+    top: 0.7cm;
+    left: 2.7cm;
+    font-size: larger;
 }
 #AddButton{
-    border: 0cm;
+    border: none;
     color: black;
     font-size: 1cm;
     background-color: rgb(163, 98, 0);
-    outline: auto;
-    outline-color: black;
+    border-radius: 10px;
 }
 label{
     padding-left: 2cm;
@@ -16,13 +29,31 @@ label{
 #Tasks label, #Tasks button{
     display: block;
 }
-#Tasks button{
+#Tasks button:not(.DeleteButtons){
     color: rgb(255, 255, 255);
    position: relative;
     top: -15px;
-    border: 0mm;
-    outline: auto;
-    outline-color: black;
+    width: 20px;
+    right: -1cm;
+    height: 20px;
+    background-image: url("Images/Unchecked.png");
+    background-size: contain;
+    border: none;
+}
+#Tasks label, #Tasks .DeleteButtons{
+    display: flex;
+    align-items: center;
+}
+.DeleteButtons{
+    color: rgb(255, 255, 255);
+   position: relative;
+    top: -35px;
+    right: 0cm;
+    width: 20px;
+    height: 20px;
+    background-image: url("Images/Delete.png");
+    background-size: contain;
+    border: none;
 }
 #Tasks {
     position: relative;
